@@ -1,0 +1,695 @@
+/**************
+** Font Used **
+**************/
+
+@font-face {
+    font-family: 'Oxygen';
+    src: url(../fonts/Oxygen/Oxygen-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oxygen';
+    src: url(../fonts/Oxygen/Oxygen-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sacramento';
+    src: url(../fonts/Sacramento/Sacramento-Regular.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    /*    src: url(../fonts/material-design-icons/Material-Design-Icons.ttf);*/
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(../fonts/material-design-icons/Material-Design-Icons.woff2) format('woff2'), url(../fonts/material-design-icons/Material-Design-Icons.woff) format('woff'), url(../fonts/material-design-icons/Material-Design-Icons.ttf) format('truetype');
+}
+
+
+/******************
+** General Style **
+*******************/
+
+body#archive,html,#archive .wrapper{
+    min-height: 100%;
+    height: 100%;
+}
+
+#archive .wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+body {
+    font-family: 'Oxygen';
+    text-align: center;
+    background-color: rgba(239, 243, 243, 1);
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    text-rendering: optimizeLegibility;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.1;
+    display: block;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3.56em;
+    margin: 1.78em 0 1.424em 0;
+}
+
+h2 {
+    font-size: 2.92em;
+    margin: 1.46em 0 1.168em 0;
+}
+
+h3 {
+    font-size: 2.28em;
+    margin: 1.14em 0 0.912em 0;
+}
+
+h4 {
+    font-size: 1.64em;
+    margin: 0.8em 0 0.656em 0;
+}
+
+h5 {
+    font-size: 1.3em;
+    margin: 0.65em 0 0.52em 0;
+}
+
+h6 {
+    font-size: 1em;
+    margin: 0.5em 0 0.4em 0;
+}
+
+header {
+    background-color: white;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /*    -webkit-font-smoothing:antialiased;*/
+    text-rendering: optimizeLegibility;
+}
+
+
+/****************
+** Brand Style **
+*****************/
+
+.brand-container>div.brand {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.brand-container {
+    flex-direction: column;
+    font-size: 1.2em;
+    padding-bottom: 2.5em;
+}
+
+.brand-iiitv {
+    font-family: 'Sacramento';
+    font-size: 9em;
+    margin: 0px;
+    /*    color: rgb(255, 61, 0);*/
+}
+
+.brand-blog {
+    margin: 0px;
+    margin-left: 0.3em;
+    font-size: 3em;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.brand-quote {
+    margin-top: -2.2em;
+    font-size: 1.1em;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+
+/*****************
+** Navbar Style **
+******************/
+
+nav {
+    color: #fff;
+    background-color: transparent;
+    width: 100%;
+    height: 5em;
+    line-height: 5em;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav>ul>li>a {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.5em;
+    text-decoration: none;
+    display: block;
+}
+
+nav>ul>li>a:hover {
+    color: rgba(255, 61, 0, 1);
+}
+
+.main-container {
+    background-color: rgba(239, 243, 243, 1);
+    display: flex;
+    justify-content: center;
+/*    overflow:hidden;*/
+}
+
+#article .main-container{
+    overflow: hidden;
+}
+
+nav>ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav>ul>li {
+    border-bottom: 3px solid transparent;
+    display: inline-block;
+    padding: 0 1em;
+    transition: all 0.7s;
+}
+
+nav ul li:hover,
+nav ul li.active {
+    background-color: transparent;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+}
+
+
+/*************************
+** Main container Style **
+**************************/
+
+.contents {
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/***************
+** Card Style **
+****************/
+
+.card {
+    display: flex;
+    width: 50em;
+    min-height: 25em;
+    background-color: white;
+    text-align: left;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 3em;
+    box-shadow: 0.15em 0.15em 0.3em rgba(0, 0, 0, 0.7);
+    transition: all 1s;
+}
+
+.card-content>p {
+    color: rgba(0, 0, 0, 0.8)
+}
+
+.card h2 {
+    margin-top: 0.65em;
+    margin-bottom: 0.65em;
+    /*    color: rgba(255, 61, 0, 1);*/
+}
+
+.card,
+.card-content,
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-action {
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 4em;
+    display: flex;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.card-content {
+    padding: 2em 4em;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.author img {
+    /*    float: left;*/
+    border-radius: 4em;
+    width: 4.5em;
+    height: 4.5em;
+}
+
+.author span {
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.author .author-name {
+    font-size: 1.2em;
+}
+
+.article-tag>ul,
+.pagination>ul,
+.share-icon>ul {
+    margin: 0;
+    padding: 0;
+}
+
+.article-tag>ul>li,
+.pagination>ul>li,
+.share-icon>ul>li {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.article-tag>ul>li>a,
+.pagination>ul>li>a,
+.share-icon>ul>li>a {
+    text-decoration: none;
+    display: block;
+}
+
+.article-tag>ul>li>a {
+    background-color: rgba(239, 243, 243, 1);
+    padding: 0.5em 1em;
+    border-radius: 0.2em;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0.2em 0.1em;
+}
+
+
+/*************************
+** Pagination Style **
+**************************/
+
+.pagination {
+    margin: 2em 0;
+    font-size: 2em;
+}
+
+.pagination>ul>li {
+    margin: 0 0.3em;
+}
+
+.pagination>ul>li.active>a {
+    color: white;
+    padding: 0.25em 0.833em;
+    /*    background-color: rgba(255, 61, 0, 1);*/
+    border-radius: 2em;
+}
+
+.pagination>ul>li>a {
+    /*    color: rgba(255, 61, 0, 1);*/
+    font-weight: bold;
+}
+
+
+/*************************
+** footer Style **
+**************************/
+
+footer {
+    /*    background-color: rgba(255, 61, 0, 1);*/
+    padding: 1em;
+    color: rgba(255, 255, 255, 1);
+}
+
+.home-button {
+    /*position: absolute;
+    font-size: 2em;
+    right:4em;
+    top: 0.2em;*/
+    font-size: 2.7em;
+    top: 0.2em;
+    /* margin-top: 0.4em; */
+    color: white;
+}
+
+
+/*************************
+** Article header **
+**************************/
+
+.article-header {
+    /*    background-color: rgba(255, 61, 0, 1);*/
+    display: flex;
+    color: rgba(255, 255, 255, 1);
+    justify-content: center;
+    padding-bottom: 3em;
+    align-items: center;
+}
+
+.article-header .title h1 {
+    margin-bottom: 0;
+    margin-top: 1.4em;
+}
+
+.article-header .article-tag {
+    text-align: left;
+    margin-top: 1.5em;
+}
+
+.article-header .author span {
+    color: white;
+    font-size: 1em;
+    margin: 0.5em 0;
+}
+
+
+/*************************
+******Article Body *******
+**************************/
+
+.article-container,
+.article-header .title {
+    display: flex;
+}
+
+.article-container,
+.header-container {
+    width: 50em;
+    text-align: left;
+}
+.article-container{
+    margin: 2em 0 2em 0;
+}
+.side-right {
+    width: 25%;
+}
+
+.article-container >div> p {
+    font-size: 1.3em;
+}
+
+#article .article-header,
+#article .main-container,
+.author-share {
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+#article .main-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/********************************
+******Article Author-Share*******
+*********************************/
+
+.author-share {
+    width: 50em;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 4em;
+    display: flex;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 0.75em;
+/*    font-size: 1.5em;*/
+}
+.author-info >span:first-child{
+    font-size: 1.5em !important;
+}
+
+.share-icon a {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 2em;
+    margin: 0 0.2em;
+}
+
+.share-icon a:hover {
+    color: rgba(0, 0, 0, 0.95);
+}
+
+
+/*************************
+** Media Query **
+**************************/
+
+@media (max-width:624px) {
+    .card {
+        width: 100%;
+    }
+    body {
+        font-size: 12px;
+    }
+    .article-tag>ul {
+        display: none;
+    }
+    .article-container,
+    .header-container,
+    .author-share ,.archive-contents .card,#disqus_thread{
+        width: 100%;
+    }
+    .contents{
+        padding-left: 1em;
+        padding-right: 1em;
+        width: 100%;
+    }
+    #article .share-icon{
+        display: none;
+    }
+}
+
+@media (min-width:625px) {
+    body {
+        font-size: 12px;
+    }
+    .article-container,
+    .header-container,
+    .author-share,.archive-contents .card,#disqus_thread{
+        width: 37em;
+    }
+}
+
+@media (min-width:665px) {
+    body {
+        font-size: 12.5px;
+    }
+    .article-container,
+    .header-container,
+    .author-share,.archive-contents .card,#disqus_thread{
+        width: 40em;
+    }
+}
+
+@media (min-width:768px) {
+    .article-container,
+    .header-container,
+    .author-share,.archive-contents .card,#disqus_thread{
+        width: 45em;
+    }
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width:992px) {
+    .article-container,
+    .header-container,.author-share,.archive-contents .card,#disqus_thread{
+        width: 50em;
+    }
+}
+
+
+/*************************
+** Color Picker **********
+**************************/
+
+.color-picker {
+    padding: 0 1em;
+    display: flex;
+    transition: all 1s;
+}
+
+.color-picker >ul {
+    padding: 0;
+    margin: 0;
+}
+
+.color-picker >ul >li {
+    display: block;
+    list-style: none;
+}
+
+.color-picker >ul >li>a {
+    display: block;
+    width: 2em;
+    height: 2em;
+    margin: 0.3em 0;
+    border-radius: 2em;
+    border: 0.15em solid white;
+}
+
+.picker-container {
+    position: absolute;
+    right: 0;
+    top: 0.2em;
+    overflow: hidden;
+}
+
+.picker-toggle {
+    margin-right: 0.5em!important;
+    background-color: transparent !important;
+    font-size: 2em!important;
+    color: rgba(0, 0, 0, 0.7);
+    border: 0 !important;
+}
+
+#article .picker-toggle,#archive .picker-toggle {
+    color: white;
+}
+
+.hide-picker {
+    overflow: hidden;
+    margin-right: -3.5em;
+}
+
+
+/*************************
+**Primary Colors **********
+**************************/
+
+.cyan {
+    background-color: rgb(0, 150, 136);
+}
+
+.orange {
+    background-color: rgb(255, 61, 0);
+}
+
+.green {
+    background-color: rgb(76, 175, 80);
+}
+
+.pink {
+    background-color: rgb(233, 30, 99);
+}
+
+.blue {
+    background-color: rgb(33, 150, 243);
+}
+
+.author-share-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.author-bio {
+    text-align: left;
+}
+
+.archive-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2.5em;
+    color: white;
+}
+
+.archive-header > .title >h1 {
+    margin: 0.7em 0;
+    font-size: 4em;
+}
+
+#archive header{
+    display: flex;
+    justify-content:center;
+}
+
+#archive .article-tag>ul>li>a {
+    padding: 0.2em 0.7em;
+    border-radius: 0;
+}
+
+.card-simple {
+    min-height: inherit;
+    margin-top: 1em;
+    box-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.7);
+}
+
+.card-simple .card-content {
+    padding: 1.5em 3em;
+}
+
+.card-simple .card-title h3{
+    margin: 0;
+    margin-bottom: 0.2em;
+}
+
+#disqus_thread {
+    padding: 2em 0;
+}
