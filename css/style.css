@@ -191,6 +191,8 @@ nav>ul>li>a:hover {
     background-color: rgba(239, 243, 243, 1);
     display: flex;
     justify-content: center;
+    flex-grow: 1;
+    align-items: flex-start;
 }
 
 #article .main-container{
@@ -278,6 +280,7 @@ nav ul li.active {
     display: flex;
     align-items: center;
 }
+
 
 .author img {
     border-radius: 4em;
@@ -431,13 +434,19 @@ footer {
     align-items: center;
 }
 
+
 /********************************
 ******Article Author-Share*******
 *********************************/
+.author-share-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 2em 0;
+}
 
 .author-share {
     width: 50em;
-    align-items: center;
     justify-content: space-between;
     padding: 0.5em 4em;
     display: flex;
@@ -450,10 +459,15 @@ footer {
     flex-direction: column;
     text-align: left;
     margin-left: 0.75em;
+    margin-right: 2em;
 /*    font-size: 1.5em;*/
 }
 .author-info >span:first-child{
     font-size: 1.5em !important;
+}
+
+.share-icon{
+
 }
 
 .share-icon a {
@@ -464,6 +478,20 @@ footer {
 
 .share-icon a:hover {
     color: rgba(0, 0, 0, 0.95);
+}
+
+#article .author{
+    align-items: flex-start;
+}
+
+#article .author-info{
+    text-align: justify;
+}
+
+#article .share-icon {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
 }
 
 /*************************
@@ -544,17 +572,14 @@ footer {
     background-color: rgb(33, 150, 243);
 }
 
-.author-share-container {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2em;
-}
 
 .author-bio {
     text-align: left;
 }
+
+/***************
+** Archive Style **
+****************/
 
 .archive-header {
     display: flex;
@@ -581,7 +606,7 @@ footer {
 }
 
 .archive-contents {
-    margin-bottom: 4em;
+    margin-bottom: 5em;
 }
 
 .card-simple {
