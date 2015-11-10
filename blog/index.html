@@ -1,0 +1,78 @@
+---
+layout: default
+title: Archive
+---
+
+{% include htmlhead.html %}
+
+<body id="archive">
+    <!--    main wrapper Starts-->
+    <div class="wrapper">
+        {% include colorpicker.html %}
+
+        <!--       Header Starts-->
+        <header class="primary-background">
+            <div class="header-container archive-header">
+                <div class="title">
+                    <h1>{{ page.title }}</h1>
+                </div>
+                <div class="article-tag">
+                    <ul>
+                    {% for tag in site.tags %}
+                        <li><a href="">{{ tag | first }}</a></li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+        </header>
+        <!--        Header Ends-->
+
+        <!--    Main Container Starts-->
+        <div class="main-container">
+            <div class="contents archive-contents">
+                {% for post in site.posts %}
+                <!--Card -->
+                <div class="card card-simple">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <a href="{{ post.url }}" class="primary-color"><h3>{{ post.title }}</h3</a>
+                        </div>
+                        <span class="credit">&nbsp;by <strong class="primary-color author-name">{{ post.author }}</strong>
+                            on {{ post.date | date: "%b %d, %Y" }}</span>
+                    </div>
+                </div>
+           		<!-- end Card -->
+                {% endfor %}
+            </div>
+
+        </div>
+        <!--        Main Container Ends-->
+
+        <!--        Pagination Starts-->
+        <div class="pagination primary-color">
+            <ul>
+                <li><a href=""><i class="fa fa-chevron-left"></i></a></li>
+                <li class="active"><a href="" class="primary-background">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+                <li><a href=""><i class="fa fa-chevron-right"></i></a></li>
+            </ul>
+        </div>
+        <!--        Pagination Ends-->
+
+        <!--        footer Starts-->
+        <footer class="primary-background"><i class="fa fa-copyright"></i></footer>
+        <!--        footer Ends-->
+    </div>
+    <!--    main wrapper Ends-->
+
+    <!--  Scripts-->
+    <script src="/js/jquery-2.1.4.min.js"></script>
+    <script src="/js/init.js"></script>
+
+</body>
+
+</html>
