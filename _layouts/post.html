@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+{% include htmlhead.html %}
+
+<body id="article">
+    <!--    main wrapper Starts-->
+    <div class="wrapper">
+        {% include colorpicker.html %}
+
+        <!--<div class="home-button"><a href="index.html"><i class="fa fa-home"></i></a></div>-->
+
+        <!--       Header Starts-->
+        <header class="article-header primary-background">
+            <div class="header-container">
+                <div class="title">
+                    <h1>{{ page.title }}</h1>
+                </div>
+                <div class="author">
+                    <span>by <strong>{{ page.author }}</strong> on {{ page.date | date: "%b %d, %Y" }}</span>
+                </div>
+                <div class="article-tag">
+                    <ul>
+                        {% for tag in page.tags %}
+                        <li><a href="">{{ tag }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+        </header>
+        <!--        Header Ends-->
+
+        <!--    Main Container Starts-->
+        <div class="main-container">
+            <div class="article-container">
+
+                <div>
+                   {{ content }}
+                </div>
+            </div>
+            <div class="author-share">
+                <div class="author-share-container">
+                    <div class="author">
+                        <img src="https://avatars0.githubusercontent.com/u/4047597?v=3&s=128" alt="">
+                        <div class="author-info">
+                            <span class="primary-color"><strong>{{ page.author }}</strong></span>
+                            <span>Lorem ipsum dolor sit amet,quae.</span>
+                        </div>
+                    </div>
+                    <div class="share-icon">
+                        <ul>
+                            <li><a href="http://www.facebook.com/sharer.php?u={{ site.fullpath }}{{ page.url | escape }}"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://plus.google.com/share?url={{ site.fullpath }}{{ page.url | escape }}"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="http://twitter.com/intent/tweet?text={{ page.title | escape }}&url={{ site.fullpath }}{{ page.url | escape }}&via=aviaryan123"><i class="fa fa-twitter"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!--<div class="author-bio">
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quidem ea, consequuntur sapiente qui asperiores iusto non impedit aperiam porro?</h4></div>-->
+
+            </div>
+            <!---->
+            {% include disqus.html %}
+        </div>
+        <!--        Main Container Ends-->
+
+        {% include footer.html %}
+    </div>
+    <!--    main wrapper Ends-->
+
+    <!--  Scripts-->
+    <script src="/js/jquery-2.1.4.min.js"></script>
+    <script src="/js/init.js"></script>
+
+</body>
+
+</html>
