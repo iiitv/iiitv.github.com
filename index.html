@@ -15,7 +15,7 @@ layout: default
         <div class="main-container">
             <div class="contents">
 
-                {% for post in site.posts limit:5 %}
+                {% for post in paginator.posts %}
                 <!--Card-->
                 <div class="card">
                     <div class="card-content">
@@ -65,8 +65,8 @@ layout: default
     <!--    main wrapper Ends-->
 
     <!--  Scripts Starts-->
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/init.js"></script>
+    <script src="/js/jquery-2.1.4.min.js"></script>
+    <script src="/js/init.js"></script>
     <!--    Scripts Ends-->
 
 </body>
