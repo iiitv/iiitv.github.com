@@ -32,6 +32,8 @@ layout: default
         </header>
         <!--        Header Ends-->
 
+        {% assign author = site.data.author[page.author] %}
+
         <!--    Main Container Starts-->
         <div class="main-container">
             <div class="article-container">
@@ -43,17 +45,17 @@ layout: default
             <div class="author-share">
                 <div class="author-share-container">
                     <div class="author">
-                        <img src="https://avatars0.githubusercontent.com/u/4047597?v=3&s=128" alt="">
+                        <img src="{{author.img}}" alt="">
                         <div class="author-info">
-                            <span class="primary-color"><strong>{{ page.author }}</strong></span>
-                            <span>Lorem ipsum dolor sit amet,quae.</span>
+                            <span class="primary-color"><strong>{{ author.name }}</strong></span>
+                            <span>{{ author.tagline }}</span>
                         </div>
                     </div>
                     <div class="share-icon">
                         <ul>
                             <li><a href="http://www.facebook.com/sharer.php?u={{ site.fullpath }}{{ page.url | escape }}"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="https://plus.google.com/share?url={{ site.fullpath }}{{ page.url | escape }}"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="http://twitter.com/intent/tweet?text={{ page.title | escape }}&url={{ site.fullpath }}{{ page.url | escape }}&via=aviaryan123"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="http://twitter.com/intent/tweet?text={{ page.title | escape }}&url={{ site.fullpath }}{{ page.url | escape }}&via={{author.twitter}}"><i class="fa fa-twitter"></i></a></li>
 
                         </ul>
                     </div>
