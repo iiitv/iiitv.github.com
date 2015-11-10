@@ -50,18 +50,22 @@ title: IIITV Blog
         <!--        Pagination Starts-->
         <div class="pagination primary-color">
             <ul>
-                {% assign quanta = paginator.page | minus: 1 | divided_by: 5 | plus: 1 %}
-                {% assign setcount = paginator.total_pages | divided_by: 5 %}
-                {% if {{paginator.total_pages | modulo: 5}} != 0 %}
-                    {% assign setcount = setcount | plus: 1 %}
-                {% endif %}
-                {% assign sp = quanta | minus: 1 | times: 5 | plus: 1 %}
-                {% assign ep = quanta | times: 5 %}
-                {% if ep > paginator.total_pages %}
+                {% if paginator.total_pages < 6 %}
+                    {% assign sp = 1 %}
                     {% assign ep = paginator.total_pages %}
+                {% else %}
+                    {% assign sp = paginator.page | minus: 2 %}
+                    {% if sp < 1 %}{% assign sp = 1 %}{% endif %}
+                    {% assign ep = sp | plus: 4 %}
+                    {% if ep > paginator.total_pages %}
+                        {% assign ep = paginator.total_pages %}
+                        {% assign sp = ep | minus: 4 %}
+                    {% endif %}
+                    {% if sp < 1 %}{% assign sp = 1 %}{% endif %}
                 {% endif %}
-                {% if quanta > 1 %}
-                <li><a href="/page{{ sp | minus: 1 }}"><i class="fa fa-chevron-left"></i></a></li>
+
+                {% if paginator.page > 1 %}
+                    <li><a href="{% if paginator.page == 2 %}/{% else %}/page{{paginator.page | minus: 1}}{% endif %}"><i class="fa fa-chevron-left"></i></a></li>
                 {% endif %}
                 {% for pagenum in (sp..ep) %}
                     {% if pagenum == paginator.page %}
@@ -70,8 +74,8 @@ title: IIITV Blog
                         <li><a href="{% if pagenum == 1 %}/{% else %}/page{{pagenum}}{% endif %}">{{ pagenum }}</a></li>
                     {% endif %}
                 {% endfor %}
-                {% if quanta < setcount %}
-                <li><a href="/page{{ ep | plus: 1 }}"><i class="fa fa-chevron-right"></i></a></li>
+                {% if paginator.page < paginator.total_pages %}
+                    <li><a href="/page{{ paginator.page | plus: 1 }}"><i class="fa fa-chevron-right"></i></a></li>
                 {% endif %}
             </ul>
         </div>
