@@ -54,20 +54,20 @@ layout: default
                 {% if {{paginator.total_pages | modulo: 5}} != 0 %}
                     {% assign setcount = setcount | plus: 1 %}
                 {% endif %}
-                {% if quanta > 1 %}
-                <li><a href=""><i class="fa fa-chevron-left"></i></a></li>
-                {% endif %}
                 {% assign sp = quanta | minus: 1 | times: 5 | plus: 1 %}
                 {% assign ep = quanta | times: 5 %}
+                {% if quanta > 1 %}
+                <li><a href="/page{{ sp | minus: 1 }}"><i class="fa fa-chevron-left"></i></a></li>
+                {% endif %}
                 {% for pagenum in (sp..ep) %}
                     {% if pagenum == paginator.page %}
-                        <li class="active"><a href="" class="primary-background">{{ pagenum }}</a></li>
+                        <li class="active"><a href="{% if pagenum == 1 %}/{% else %}/page{{pagenum}}{% endif %}" class="primary-background">{{ pagenum }}</a></li>
                     {% else %}
-                        <li><a href="">{{ pagenum }}</a></li>
+                        <li><a href="{% if pagenum == 1 %}/{% else %}/page{{pagenum}}{% endif %}">{{ pagenum }}</a></li>
                     {% endif %}
                 {% endfor %}
                 {% if quanta < setcount %}
-                <li><a href=""><i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="/page{{ ep | plus: 1 }}"><i class="fa fa-chevron-right"></i></a></li>
                 {% endif %}
             </ul>
         </div>
