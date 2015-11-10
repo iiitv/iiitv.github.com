@@ -10,7 +10,7 @@ title: Archive
         <div class="card-title">
             <a href="{{ post.url }}" class="primary-color"><h3>{{ post.title }}</h3</a>
         </div>
-        <span class="credit">&nbsp;by <strong class="primary-color author-name">{{ post.author }}</strong>
+        <span class="credit">&nbsp;by <a href="http://github.com/{{post.author}}"><strong class="primary-color author-name">{{ post.author }}</strong></a>
             on {{ post.date | date: "%b %d, %Y" }}</span>
     </div>
 </div>
