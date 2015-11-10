@@ -1,9 +1,10 @@
 ---
 layout: archive
 title: Archive
+tagpage: 1
 ---
 
-{% for post in site.posts %}
+{% for post in page.posts %}
 <!--Card -->
 <div class="card card-simple{% for tag in post.tags %} tag_{{tag}}{% endfor %}">
     <div class="card-content">

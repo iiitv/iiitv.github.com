@@ -15,5 +15,9 @@ paginate: 5
 paginate_path: /page:num/
 gems: [jekyll-paginate]
 
+# Tagging
+tag_page_layout: tag_page
+tag_page_dir: tags
+
 disqusid: blogiiitv
 disqusurl: http://iiitv.github.io
