@@ -431,7 +431,6 @@ footer {
     align-items: center;
 }
 
-
 /********************************
 ******Article Author-Share*******
 *********************************/
@@ -579,6 +578,10 @@ footer {
 #archive .article-tag>ul>li>a {
     padding: 0.2em 0.7em;
     border-radius: 0;
+}
+
+.archive-contents {
+    margin-bottom: 4em;
 }
 
 .card-simple {
