@@ -1,0 +1,4 @@
+makeposts.py
+_site
+_posts/*
+.jekyll-metadata
