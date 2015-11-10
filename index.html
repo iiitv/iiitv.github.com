@@ -50,7 +50,7 @@ title: IIITV Blog
         <!--        Pagination Starts-->
         <div class="pagination primary-color">
             <ul>
-                {% assign quanta = paginator.page | minus: 1 | divided_by: paginator.per_page | plus: 1 %}
+                {% assign quanta = paginator.page | minus: 1 | divided_by: 5 | plus: 1 %}
                 {% assign setcount = paginator.total_pages | divided_by: 5 %}
                 {% if {{paginator.total_pages | modulo: 5}} != 0 %}
                     {% assign setcount = setcount | plus: 1 %}
