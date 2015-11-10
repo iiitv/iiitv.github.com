@@ -56,6 +56,9 @@ layout: default
                 {% endif %}
                 {% assign sp = quanta | minus: 1 | times: 5 | plus: 1 %}
                 {% assign ep = quanta | times: 5 %}
+                {% if ep > paginator.total_pages %}
+                    {% assign ep = paginator.total_pages %}
+                {% endif %}
                 {% if quanta > 1 %}
                 <li><a href="/page{{ sp | minus: 1 }}"><i class="fa fa-chevron-left"></i></a></li>
                 {% endif %}
