@@ -20,9 +20,9 @@ layout: default
                 <div class="card">
                     <div class="card-content">
                         <div class="card-title">
-                            <a href="article.html" class="primary-color"><h2>{{ post.title }}</h2></a></div>
+                            <a href="{{post.url}}" class="primary-color"><h2>{{ post.title }}</h2></a></div>
                         <p>{{ post.content | strip_html | truncatewords: 70 }}</p>
-                        <h5 class="primary-color"><a href="article.html">more</a></h5>
+                        <h5 class="primary-color"><a href="{{ post.url }}">more</a></h5>
                     </div>
                     <div class="card-action">
                         <div class="author">
@@ -39,7 +39,7 @@ layout: default
                         </div>
                     </div>
                 </div>
-
+                <!--Card Ends-->
                 {% endfor %}
 
             </div>
@@ -49,13 +49,26 @@ layout: default
         <!--        Pagination Starts-->
         <div class="pagination primary-color">
             <ul>
+                {% assign quanta = paginator.page | minus: 1 | divided_by: paginator.per_page | plus: 1 %}
+                {% assign setcount = paginator.total_pages | divided_by: 5 %}
+                {% if {{paginator.total_pages | modulo: 5}} != 0 %}
+                    {% assign setcount = setcount | plus: 1 %}
+                {% endif %}
+                {% if quanta > 1 %}
                 <li><a href=""><i class="fa fa-chevron-left"></i></a></li>
-                <li class="active"><a href="" class="primary-background">1</a></li>
-                <li><a href="">2</a></li>
-                <li><a href="">3</a></li>
-                <li><a href="">4</a></li>
-                <li><a href="">5</a></li>
+                {% endif %}
+                {% assign sp = quanta | minus: 1 | times: 5 | plus: 1 %}
+                {% assign ep = quanta | times: 5 %}
+                {% for pagenum in (sp..ep) %}
+                    {% if pagenum == paginator.page %}
+                        <li class="active"><a href="" class="primary-background">{{ pagenum }}</a></li>
+                    {% else %}
+                        <li><a href="">{{ pagenum }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if quanta < setcount %}
                 <li><a href=""><i class="fa fa-chevron-right"></i></a></li>
+                {% endif %}
             </ul>
         </div>
         <!--        Pagination Ends-->
