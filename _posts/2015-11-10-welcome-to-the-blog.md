@@ -38,6 +38,6 @@ Start writing your post from here...
 This is some **bold text** and *italics*.
 ```
 
-After writing your post ([example](https://github.com/iiitv/iiitv.github.com/blob/master/_posts/2015-11-10-welcome-to-the-blog.md)), send us a pull request. The moderators will have a look at your post and merge it, thus your post will be live on the blog.
+After writing your post ([example](https://raw.githubusercontent.com/iiitv/iiitv.github.com/master/_posts/2015-11-10-welcome-to-the-blog.md)), send us a pull request. The moderators will have a look at your post and merge it, thus your post will be live on the blog.
 
 I know this is not the perfect guide, so feel free to contact me or [open an issue](https://github.com/iiitv/iiitv.github.com/issues) in case you need any help. 
