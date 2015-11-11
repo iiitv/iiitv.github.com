@@ -54,10 +54,6 @@ a {
     color: inherit;
 }
 
-.article-container a {
-    border-bottom: 1px dotted;
-}
-
 h1,
 h2,
 h3,
@@ -409,7 +405,9 @@ footer {
 .article-header .title {
     display: flex;
 }
-
+.article-container>div {
+    width: 100%;
+}
 .article-container,
 .header-container {
     width: 50em;
@@ -438,6 +436,22 @@ footer {
     align-items: center;
 }
 
+.article-container blockquote {
+    border-left: 2px solid rgba(0,0,0,0.5);
+    padding-left: 1em;
+    font-size: 1.2em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.article-container a {
+    border-bottom: 1px dotted;
+    color: rgba(47, 79, 79, 1);
+}
+
+.article-container>div>p>code {
+    color: crimson;
+}
 
 /********************************
 ******Article Author-Share*******
@@ -637,7 +651,7 @@ footer {
 **************************/
 
 @media (max-width:624px) {
-    .card {
+    .card, .highlight {
         width: 100%;
     }
     body {
@@ -673,6 +687,7 @@ footer {
     }
     .article-container,
     .header-container,
+    .highlight,
     .author-share,.archive-contents .card,#disqus_thread{
         width: 37em;
     }
@@ -684,6 +699,7 @@ footer {
     }
     .article-container,
     .header-container,
+    .highlight,
     .author-share,.archive-contents .card,#disqus_thread{
         width: 40em;
     }
@@ -692,6 +708,7 @@ footer {
 @media (min-width:768px) {
     .article-container,
     .header-container,
+    .highlight,
     .author-share,.archive-contents .card,#disqus_thread{
         width: 45em;
     }
@@ -702,6 +719,7 @@ footer {
 
 @media (min-width:992px) {
     .article-container,
+    .highlight,
     .header-container,.author-share,.archive-contents .card,#disqus_thread{
         width: 50em;
     }
