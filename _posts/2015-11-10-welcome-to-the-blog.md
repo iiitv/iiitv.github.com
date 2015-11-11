@@ -2,7 +2,7 @@
 layout: post
 author: aviaryan
 title: Welcome to IIITV Blog
-tags: blog announcement github
+tags: blog announcement
 ---
 
 Hello everyone.

@@ -8,7 +8,7 @@ baseurl:
 permalink: /blog/:title.html
 title: IIITV Blog
 
-highlighter: rouge
+highlighter: pygments
 paginate: 5
 paginate_path: /page:num/
 gems: [jekyll-paginate]
