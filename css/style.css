@@ -217,6 +217,9 @@ nav ul li.active {
     border-bottom: 3px solid rgba(0, 0, 0, 0.3);
 }
 
+#home li[data-href="home"] {
+    border-bottom: 3px solid rgba(0, 0, 0, 0.4);
+}
 
 /*************************
 ** Main container Style **
@@ -647,8 +650,137 @@ footer {
 }
 
 /*************************
+** About **
+**************************/
+
+#about {
+    background: white;
+}
+
+#about .main-container {
+    background: white;
+}
+
+#about .brand-iiitv {
+    margin-left: 0.12em;
+}
+
+#about .brand-blog {
+    margin-left: 0;
+}
+
+.institute-pic img {
+    width: 20em;
+}
+
+.institute {
+    display: flex;
+    padding: 0 2em 2em 2em;
+}
+
+.institute-info {
+    text-align: justify;
+    margin-left: 2em;
+}
+
+.institute-info p {
+    margin: 0;
+}
+
+.title-container .title {
+    padding: 0 1.5em;
+}
+
+.title-container .title>h2 {
+    margin: 0;
+}
+
+.institute-container,
+.blog-container,
+.team-container {
+    width: 100%;
+    /*    padding: 3em 2em 2em 2em;*/
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-width: 0 1px 1px 1px;
+    /*    padding-top: 0;*/
+}
+
+#about .home-button {
+    color: rgba(0, 0, 0, 0.701961)
+}
+
+.title-container {
+    display: flex;
+    top: -2em;
+    position: relative;
+}
+
+.dash-lg {
+    width: 30em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.dash-sm {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    flex-grow: 1;
+}
+
+.dash-lg,
+.dash-sm {
+    margin-bottom: 1.2em;
+}
+
+#about .contents {
+    margin-top: 8em;
+    margin-bottom: 8em;
+    width: 50em;
+    box-sizing: border-box;
+}
+
+#about .brand-container {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding-bottom: 1.5em;
+    padding-top: 2em;
+}
+
+.blog-container,
+.team-container {
+    margin-top: 10em;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.team-container .institute {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile img {
+    width: 15em;
+}
+
+.blog-info,
+.team-info {
+    text-align: justify;
+    /*    margin-left: 2em*/
+}
+
+.profile {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/*************************
 ** Media Query **
 **************************/
+
+@media (max-width:480px) {
+    .profile img {
+        width: 12em;
+    }
+}
 
 @media (max-width:624px) {
     .card, .highlight {
@@ -665,7 +797,8 @@ footer {
     .author-share ,.archive-contents .card,#disqus_thread{
         width: 100%;
     }
-    .contents{
+    .contents, 
+    #about .contents {
         padding-left: 1em;
         padding-right: 1em;
         width: 100%;
@@ -675,10 +808,13 @@ footer {
     }
 
     .hide-picker {
-    overflow: hidden;
-    margin-right: -7.5em;
-}
+        overflow: hidden;
+        margin-right: -7.5em;
+    }
 
+    .institute-pic img {
+        width: 14em;
+    }
 }
 
 @media (min-width:625px) {
@@ -688,8 +824,13 @@ footer {
     .article-container,
     .header-container,
     .highlight,
+    #about .contents,
     .author-share,.archive-contents .card,#disqus_thread{
         width: 37em;
+    }
+
+    .institute-pic img {
+        width: 16em;
     }
 }
 
@@ -700,6 +841,7 @@ footer {
     .article-container,
     .header-container,
     .highlight,
+    #about .contents,
     .author-share,.archive-contents .card,#disqus_thread{
         width: 40em;
     }
@@ -709,6 +851,7 @@ footer {
     .article-container,
     .header-container,
     .highlight,
+    #about .contents,
     .author-share,.archive-contents .card,#disqus_thread{
         width: 45em;
     }
@@ -720,6 +863,7 @@ footer {
 @media (min-width:992px) {
     .article-container,
     .highlight,
+    #about .contents,
     .header-container,.author-share,.archive-contents .card,#disqus_thread{
         width: 50em;
     }
