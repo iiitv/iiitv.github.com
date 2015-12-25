@@ -1,1 +1,1 @@
-require 'jekyll/tagging'
+#require 'jekyll/tagging'
