@@ -26,7 +26,7 @@ See [here](https://github.com/iiitv/iiitv.github.com/blob/master/_data/author.ym
 
 Once that is done, create a file in *_posts* directory of the format `YYYY-MM-DD-PAGE-LINK.md`. Each of these 'md' (markdown) files contains a single post. After creating the file, open it and start writing your post.
 
-{% highlight markdown %}
+{% highlight %}
 ---
 layout: post
 title: PAGE TITLE
