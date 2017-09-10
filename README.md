@@ -12,7 +12,7 @@ The design is drawn from [@ansarimofid's work](https://github.com/ansarimofid/bl
 # Setup Instructions
 
 ### 1. Clone the repository
-* Open terminal and type the following :
+* Open terminal and type the following
 ```
 git clone https://github.com/iiitv/iiitv.github.com.git
 ```
@@ -44,7 +44,7 @@ You could do this in two ways-
 #### How to install Ruby
 * Follow the steps given by [Ruby](https://www.ruby-lang.org/en/documentation/installation/).
 ###### Or if you are using apt (Debian or Ubuntu)
-* Debian GNU/Linux and Ubuntu use the apt package manager. You can use it like this:
+* Debian GNU/Linux and Ubuntu use the apt package manager. You can use it like this
 ```
  sudo apt-get install ruby-full
  ```
