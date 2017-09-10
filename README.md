@@ -8,6 +8,7 @@ The design is drawn from [@ansarimofid's work](https://github.com/ansarimofid/bl
 
 
 
+
 # Setup Instructions
 
 ### 1. Clone the repository
@@ -34,7 +35,7 @@ git clone https://github.com/iiitv/iiitv.github.com.git
 You could do this in two ways-
 1. Follow the steps given by [Jekyll](https://jekyllrb.com/docs/installation/).
 2. Follow the instructions below:
-#### To install Jekyll on your system you need the following:
+#### To install Jekyll on your system you need the following
 * GNU/Linux, Unix, or macOS
 * Ruby version 2.1 or above, including all development headers
 * RubyGems
@@ -79,4 +80,4 @@ You could do this in two ways-
  jekyll serve
  ```
  * This command will run the project on default ``` localhost:4000 ```.
- * Open any browser and got to the address ``` localhost:4000 ```.
+ * Open any browser and go to the address ``` localhost:4000 ```.
