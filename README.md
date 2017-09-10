@@ -6,6 +6,8 @@ See the inauguration post - http://iiitv.github.io/blog/welcome-to-the-blog.html
 
 The design is drawn from [@ansarimofid's work](https://github.com/ansarimofid/blog-iiitv).
 
+
+
 # Setup Instructions
 
 ### 1. Clone the repository
