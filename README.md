@@ -9,7 +9,7 @@ The design is drawn from [@ansarimofid's work](https://github.com/ansarimofid/bl
 
 
 
-# Setup Instructions
+## Development Instructions
 
 ### 1. Clone the repository
 * Open terminal and type the following
