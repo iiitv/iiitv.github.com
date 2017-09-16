@@ -27,7 +27,7 @@ git clone https://github.com/iiitv/iiitv.github.com.git
  ```
  cd iiitv.github.com/
  ```
- 
+
 ### 3. Install Jekyll to your system
 
 You could do this in two ways-
@@ -75,7 +75,6 @@ You could do this in two ways-
  ###### To install redcarpet do the following
  ```
  sudo gem install redcarpet
-
  ```
  
  ### 4. Running the project
